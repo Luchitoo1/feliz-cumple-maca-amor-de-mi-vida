@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1 class="titulo">¡Todavía no es tu cumple amor!</h1>
+        <p class="subtitulo">Amor mio, estas viendo una previsualización de la página. Cuando llegue tu cumple bebé vas a poder ver todo el contenido. Por ahora te dejo este contador lindo, si pones tu dedo salen globitos. ¡TE AMO!!</p>
+    </header>
+
+    <!-- Temporizador -->
+    <div class="temporizador">
+        <div id="contador" class="contador-hover">
+            <!-- El texto del temporizador será cambiado por JavaScript -->
+        </div>
+    </div>
+
+    <!-- Imagenes o galería (opcional) -->
+    <div class="imagenes" id="imagenesGaleria">
+        <div class="galeria">
+            <img src="imagen1.png" alt="Imagen de cumpleaños 1">
+            <img src="imagen2.png" alt="Imagen de cumpleaños 2">
+        </div>
+    </div>
+
+    <!-- Mensaje final -->
+    <div class="mensaje">
+        <p id="mensajeCumpleaños">¡Te amo muchísimo! 🎉💖</p>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Lo hizo el amor de tu vida, Luchito.</p>
+    </footer>
+
+    <!-- Reproductor de YouTube -->
+    <div id="reproductor" class="reproductor">
+        <div id="tituloVideo" class="titulo-video">Reproductor de YouTube</div>
+        <iframe id="videoReproductor" width="300" height="200" src="https://www.youtube.com/embed/videoseries?list=PL9ayKZLaaRx8sRq69bwe_cAifSKlnAmoE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Confetti (globos) -->
+    <div id="globos-container"></div>
+
+    <!-- Script para Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Enlace al archivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>
