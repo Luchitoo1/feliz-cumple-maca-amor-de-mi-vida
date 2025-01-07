@@ -54,12 +54,13 @@ function actualizarTemporizador() {
 }
 
 // Función para crear globos aleatorios
+// Función para crear globos aleatorios
 function crearGlobo() {
     const globosContainer = document.getElementById("globos-container");
     const globosActivos = document.querySelectorAll('.globo');
     
-    // Limitar a 2 globos en pantalla
-    if (globosActivos.length < 2) {
+    // Limitar a 5 globos en pantalla (puedes ajustarlo según sea necesario)
+    if (globosActivos.length < 8) {
         const globo = document.createElement("div");
         globo.classList.add("globo");
 
@@ -80,14 +81,11 @@ function crearGlobo() {
 }
 
 // Función para iniciar la creación de globos
-let cooldown = false;
 document.getElementById("contador").addEventListener("mouseover", () => {
-    if (!cooldown) {
-        crearGlobo();
-        cooldown = true;
-        setTimeout(() => cooldown = false, 3000); // Cooldown de 3 segundos
-    }
+    // Crear un globo sin cooldown
+    crearGlobo();
 });
+
 
 // Llamada inicial para actualizar el temporizador
 setInterval(actualizarTemporizador, 1000);
