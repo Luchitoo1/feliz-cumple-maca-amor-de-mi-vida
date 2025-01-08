@@ -104,6 +104,21 @@ document.getElementById("contador").addEventListener("mouseover", () => {
     crearGlobo();
 });
 
+function crearEmoji() {
+    const emojiContainer = document.createElement("div");
+    emojiContainer.textContent = "❤️";
+    emojiContainer.style.position = "absolute";
+    emojiContainer.style.left = `${Math.random() * window.innerWidth}px`;
+    emojiContainer.style.top = `${Math.random() * window.innerHeight}px`;
+    emojiContainer.style.fontSize = "3em";
+    document.body.appendChild(emojiContainer);
+
+    setTimeout(() => {
+        emojiContainer.remove();
+    }, 1000); // Duración de la animación
+}
+
+document.getElementById("contador").addEventListener("mouseover", crearEmoji);
 
 // Llamada inicial para actualizar el temporizador
 setInterval(actualizarTemporizador, 1000);
