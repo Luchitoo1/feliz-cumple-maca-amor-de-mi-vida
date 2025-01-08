@@ -58,6 +58,15 @@ function actualizarTemporizador() {
         // Reproducir el audio de fondo cuando llegue el contador a 0
         const audioFondo = document.getElementById("audioFondo");
         audioFondo.play(); // Reproduce el audio   
+
+        document.body.style.background = "linear-gradient(135deg, #ff99cc, #ff1f82)";
+        document.getElementById("contador").style.animation = "explosionTexto 2s ease";
+
+        confetti({
+            particleCount: 60,
+            spread: 60,
+            origin: { y: 0.6 }
+        });
     }
 }
 
@@ -69,7 +78,7 @@ function crearGlobo() {
     const globosActivos = document.querySelectorAll('.globo');
     
     // Limitar a 5 globos en pantalla (puedes ajustarlo según sea necesario)
-    if (globosActivos.length < 8) {
+    if (globosActivos.length < 10) {
         const globo = document.createElement("div");
         globo.classList.add("globo");
 

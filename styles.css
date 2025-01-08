@@ -212,3 +212,18 @@ footer {
         color: #ffccff; /* Lavanda suave */
     }
 }
+/* Animación para cuando el contador llegue a cero */
+@keyframes explosionTexto {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
