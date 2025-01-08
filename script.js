@@ -27,17 +27,7 @@ function actualizarTemporizador() {
         if (reproductor) {
             reproductor.style.display = "block";
         }
-
-        let colors = ['#FF8A8A', '#F7A7C4', '#FFD1DC', '#FFB6C1'];
-        let body = document.body;
-        let i = 0;
-
-        setInterval(() => {
-            body.style.background = `linear-gradient(135deg, ${colors[i % colors.length]}, ${colors[(i + 1) % colors.length]})`;
-            i++;
-            }, 2000); // Cambia el fondo cada 2 segundos
-            // Asegurarse de que el mensaje personalizado esté oculto
-
+        
         document.getElementById("mensajeCumpleaños").style.display = "none";
 
     } else {
