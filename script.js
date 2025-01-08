@@ -38,7 +38,7 @@ function actualizarTemporizador() {
             }, 2000); // Cambia el fondo cada 2 segundos
             // Asegurarse de que el mensaje personalizado esté oculto
 
-            document.getElementById("mensajeCumpleaños").style.display = "none";
+        document.getElementById("mensajeCumpleaños").style.display = "none";
 
     } else {
         // Cambiar texto del contador a "🎉VEINTE MÁS UNO🎉"
