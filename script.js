@@ -27,7 +27,8 @@ function actualizarTemporizador() {
         if (reproductor) {
             reproductor.style.display = "block";
         }
-        
+
+        // Asegurarse de que el mensaje personalizado esté oculto
         document.getElementById("mensajeCumpleaños").style.display = "none";
 
     } else {
@@ -118,8 +119,6 @@ function crearEmoji() {
 }
 
 document.getElementById("contador").addEventListener("mouseover", crearEmoji);
-
-setInterval(mostrarFrase, 2000); // Cambia de frase cada 2 segundos
 
 // Llamada inicial para actualizar el temporizador
 setInterval(actualizarTemporizador, 1000);
