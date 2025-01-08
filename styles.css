@@ -68,7 +68,7 @@ header p {
 
 /* Estilo para el contador */
 #contador {
-    background-color: #ff66b2;
+    background-color: #ff66b2; /* Rosa de fondo */
     color: white;
     padding: 30px 20px;
     border-radius: 15px;
@@ -76,9 +76,12 @@ header p {
     display: inline-block;
     font-size: 1.8em;
     font-family: 'Poppins', sans-serif;
-    animation: pulsar 1.5s infinite ease-in-out;
+    animation: pulsar 1.5s infinite ease-in-out, cambioColor 4s infinite; /* Combina la animación pulsante y la de color */
     position: relative;
     cursor: pointer;
+    
+    /* Resaltado del texto con sombra */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), 0px 0px 25px rgba(255, 255, 255, 0.5);
 }
 
 /* Animación de pulso para el temporizador */
@@ -190,4 +193,22 @@ footer {
 /* Estilo para el contador cuando el mouse pasa sobre él */
 .contador-hover:hover {
     background-color: #ff1f82;
+}
+/* Animación para cambiar el color del texto del contador */
+@keyframes cambioColor {
+    0% {
+        color: #ffb3d9; /* Rosa claro */
+    }
+    25% {
+        color: #ffccff; /* Lavanda suave */
+    }
+    50% {
+        color: #ff99cc; /* Rosa medio */
+    }
+    75% {
+        color: #ffb3d9; /* Rosa claro */
+    }
+    100% {
+        color: #ffccff; /* Lavanda suave */
+    }
 }
