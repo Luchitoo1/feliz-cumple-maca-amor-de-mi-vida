@@ -28,8 +28,17 @@ function actualizarTemporizador() {
             reproductor.style.display = "block";
         }
 
-        // Asegurarse de que el mensaje personalizado esté oculto
-        document.getElementById("mensajeCumpleaños").style.display = "none";
+        let colors = ['#FF8A8A', '#F7A7C4', '#FFD1DC', '#FFB6C1'];
+        let body = document.body;
+        let i = 0;
+
+        setInterval(() => {
+            body.style.background = `linear-gradient(135deg, ${colors[i % colors.length]}, ${colors[(i + 1) % colors.length]})`;
+            i++;
+            }, 2000); // Cambia el fondo cada 2 segundos
+            // Asegurarse de que el mensaje personalizado esté oculto
+
+            document.getElementById("mensajeCumpleaños").style.display = "none";
 
     } else {
         // Cambiar texto del contador a "🎉VEINTE MÁS UNO🎉"
@@ -119,23 +128,6 @@ function crearEmoji() {
 }
 
 document.getElementById("contador").addEventListener("mouseover", crearEmoji);
-
-const frases = [
-    "Te amo más que ayer, pero menos que mañana.",
-    "Cada segundo sin vos se me hace eterno.",
-    "Sos mi razón de vivir.",
-    "Gracias por hacerme sentir seguro conmigo mismo.",
-    "Mi vida no seria igual sin vos.",
-    "Amo tu sonrrisa",
-    "Tus lunares me encantan <3",
-    "Cuando sean las 12...",
-    "... vas a ver por qué te amo tanto"
-];
-
-function mostrarFrase() {
-    const frase = frases[Math.floor(Math.random() * frases.length)];
-    document.getElementById("mensajeCumpleaños").innerText = frase;
-}
 
 setInterval(mostrarFrase, 2000); // Cambia de frase cada 2 segundos
 
