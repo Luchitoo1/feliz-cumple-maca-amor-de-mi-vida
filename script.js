@@ -1,6 +1,6 @@
 // Función para actualizar el temporizador
 function actualizarTemporizador() {
-    const fechaFutura = new Date('January 8, 2025 00:00:00');
+    const fechaFutura = new Date('January 8, 2026 00:00:00');
     const ahora = new Date();
     const tiempoRestante = fechaFutura - ahora;
 
